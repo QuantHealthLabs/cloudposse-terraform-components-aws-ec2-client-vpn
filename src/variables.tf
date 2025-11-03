@@ -39,7 +39,7 @@ variable "retention_in_days" {
 
 variable "logging_stream_name" {
   type        = string
-  description = "Names of stream used for logging"
+  description = "Name of stream used for logging"
 }
 
 variable "associated_security_group_ids" {
@@ -126,4 +126,10 @@ variable "split_tunnel" {
   default     = false
   type        = bool
   description = "Indicates whether split-tunnel is enabled on VPN endpoint. Default value is false."
+}
+
+variable "vpc_component_name" {
+  type        = string
+  description = "The name of the vpc component"
+  default     = "vpc"
 }

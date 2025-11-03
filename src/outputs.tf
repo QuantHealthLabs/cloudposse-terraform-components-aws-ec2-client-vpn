@@ -23,3 +23,8 @@ output "full_client_configuration" {
   description = "Client configuration including client certificate and private key for mutual authentication"
   sensitive   = true
 }
+
+output "logging_stream_name" {
+  value       = var.logging_stream_name
+  description = "Name of stream used for logging"
+}
