@@ -51,7 +51,7 @@ variable "associated_security_group_ids" {
 variable "authorization_rules" {
   type = list(object({
     name                 = string
-    access_group_id      = string
+    access_group_id      = optional(string)
     authorize_all_groups = bool
     description          = string
     target_network_cidr  = string
