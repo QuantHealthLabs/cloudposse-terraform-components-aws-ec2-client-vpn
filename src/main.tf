@@ -50,7 +50,7 @@ module "ec2_client_vpn" {
   vpc_id                        = module.vpc.outputs.vpc_id
   export_client_certificate     = var.export_client_certificate
   saml_provider_arn             = var.saml_provider_arn
-  saml_metadata_document        = file(var.saml_metadata_document)
+  saml_metadata_document        = var.saml_metadata_document
   dns_servers                   = var.dns_servers
   split_tunnel                  = var.split_tunnel
 
